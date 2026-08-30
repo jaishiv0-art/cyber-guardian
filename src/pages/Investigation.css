@@ -1,0 +1,77 @@
+.g-invpage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 1100px;
+}
+
+.g-invpage-input-panel { padding: var(--space-6); }
+.g-invpage-input-head { margin-bottom: var(--space-5); }
+.g-invpage-input-head h2 { font-size: 21px; margin-bottom: 6px; }
+.g-invpage-input-head p { font-size: 13.5px; }
+
+.g-invpage-run {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+.g-invpage-core-panel {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-5);
+}
+
+.g-invpage-target {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+.g-invpage-target-label { font-size: 11.5px; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.06em; }
+.g-invpage-target-value {
+  font-size: 12.5px;
+  color: var(--text-primary);
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.g-invpage-done-actions { display: flex; gap: var(--space-3); flex-wrap: wrap; justify-content: center; }
+
+.g-invpage-error {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: rgba(255,92,122,0.08);
+  border: 1px solid rgba(255,92,122,0.25);
+  text-align: left;
+  max-width: 380px;
+}
+.g-invpage-error-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--risk-critical);
+  background: rgba(255,92,122,0.14);
+}
+.g-invpage-error-title { font-size: 13.5px; font-weight: 600; color: var(--text-primary); display: block; margin-bottom: 4px; }
+.g-invpage-error-detail { font-size: 12.5px; color: var(--text-tertiary); }
+
+.g-invpage-timeline-panel { padding: var(--space-5) var(--space-5) var(--space-6); }
+.g-invpage-timeline-panel h3 { font-size: 15.5px; margin-bottom: var(--space-4); }
+
+@media (max-width: 900px) {
+  .g-invpage-run { grid-template-columns: 1fr; }
+}

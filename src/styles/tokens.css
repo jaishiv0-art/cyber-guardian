@@ -1,0 +1,67 @@
+:root {
+  /* ---- Surface ---- */
+  --void: #080B13;
+  --abyss: #0D1220;
+  --abyss-2: #111729;
+  --panel: #131A2E;
+  --panel-raised: #171F36;
+  --border-hair: rgba(198, 210, 255, 0.08);
+  --border-soft: rgba(198, 210, 255, 0.14);
+  --border-strong: rgba(198, 210, 255, 0.24);
+
+  /* ---- Guardian Core duotone ---- */
+  --core-cyan: #4FF3D6;
+  --core-cyan-dim: #2BC9AE;
+  --core-violet: #9B7BFF;
+  --core-violet-dim: #7457D9;
+  --core-glow: rgba(79, 243, 214, 0.35);
+
+  /* ---- Risk semantics ---- */
+  --risk-safe: #3DDC97;
+  --risk-safe-bg: rgba(61, 220, 151, 0.12);
+  --risk-low: #7BE0C9;
+  --risk-medium: #FFB84D;
+  --risk-medium-bg: rgba(255, 184, 77, 0.12);
+  --risk-high: #FF7A5C;
+  --risk-high-bg: rgba(255, 122, 92, 0.12);
+  --risk-critical: #FF5C7A;
+  --risk-critical-bg: rgba(255, 92, 122, 0.14);
+
+  /* ---- Text ---- */
+  --text-primary: #EEF2FF;
+  --text-secondary: #9BA5C4;
+  --text-tertiary: #6B7594;
+  --text-on-accent: #06110F;
+
+  /* ---- Type ---- */
+  --font-display: 'Chakra Petch', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
+
+  /* ---- Scale ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --shadow-panel: 0 20px 60px -20px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255,255,255,0.03) inset;
+  --shadow-lift: 0 30px 80px -24px rgba(0, 0, 0, 0.7);
+
+  --sidebar-w: 264px;
+  --sidebar-w-collapsed: 84px;
+  --topbar-h: 72px;
+}
