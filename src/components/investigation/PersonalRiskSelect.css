@@ -1,0 +1,48 @@
+.g-prisk {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: var(--space-4);
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--border-hair);
+}
+
+.g-prisk-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.g-prisk-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.g-prisk-hint {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.g-prisk-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.g-prisk-chip {
+  padding: 6px 13px;
+  border-radius: var(--radius-full);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-hair);
+  color: var(--text-tertiary);
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.g-prisk-chip:hover:not(:disabled) { color: var(--text-primary); border-color: var(--border-soft); }
+.g-prisk-chip--active {
+  color: var(--void);
+  background: linear-gradient(135deg, var(--core-cyan), var(--core-violet));
+  border-color: transparent;
+}
+.g-prisk-chip:disabled { opacity: 0.5; cursor: not-allowed; }

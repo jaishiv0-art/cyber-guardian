@@ -1,0 +1,154 @@
+.g-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-w);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, rgba(19, 26, 46, 0.7), rgba(11, 15, 26, 0.85));
+  border-right: 1px solid var(--border-hair);
+  backdrop-filter: blur(24px);
+  z-index: 50;
+  padding: var(--space-5) var(--space-4);
+  transition: width 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+
+.g-sidebar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.g-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+.g-sidebar-brand-mark { flex-shrink: 0; }
+.g-sidebar-brand-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.g-sidebar-brand-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+}
+.g-sidebar-brand-tag {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--text-tertiary);
+  letter-spacing: 0.04em;
+}
+
+.g-sidebar-close {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 6px;
+  border-radius: 8px;
+}
+.g-sidebar-close:hover { background: rgba(255,255,255,0.06); color: var(--text-primary); }
+
+.g-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.g-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 11px var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transition: background 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+}
+.g-sidebar-link-icon { display: flex; color: inherit; flex-shrink: 0; }
+.g-sidebar-link:hover {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.05);
+  transform: translateX(2px);
+}
+.g-sidebar-link--active {
+  color: var(--void);
+  background: linear-gradient(135deg, var(--core-cyan), var(--core-violet));
+  box-shadow: 0 6px 20px -6px rgba(79, 243, 214, 0.4);
+}
+.g-sidebar-link--active:hover { transform: none; }
+
+.g-sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+}
+
+.g-sidebar-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-hair);
+}
+.g-sidebar-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--core-cyan);
+  box-shadow: 0 0 0 3px rgba(79,243,214,0.16);
+  flex-shrink: 0;
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
+.g-sidebar-status-text { display: flex; flex-direction: column; min-width: 0; }
+.g-sidebar-status-title { font-size: 12.5px; color: var(--text-primary); font-weight: 600; }
+.g-sidebar-status-sub { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+.g-sidebar-shield {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  padding: 0 var(--space-2);
+}
+
+/* ---- Responsive: icon rail ---- */
+@media (max-width: 1080px) {
+  .g-sidebar { width: var(--sidebar-w-collapsed); padding: var(--space-5) var(--space-2); }
+  .g-sidebar-brand-text, .g-sidebar-link-text, .g-sidebar-status-text, .g-sidebar-shield span {
+    display: none;
+  }
+  .g-sidebar-brand { justify-content: center; }
+  .g-sidebar-link { justify-content: center; padding: 12px; }
+  .g-sidebar-status { justify-content: center; }
+}
+
+/* ---- Responsive: off-canvas drawer ---- */
+@media (max-width: 760px) {
+  .g-sidebar {
+    width: 280px;
+    transform: translateX(-100%);
+    padding: var(--space-5) var(--space-4);
+    z-index: 60;
+  }
+  .g-sidebar--open { transform: translateX(0); box-shadow: var(--shadow-lift); }
+  .g-sidebar-brand-text, .g-sidebar-link-text, .g-sidebar-status-text, .g-sidebar-shield span {
+    display: flex;
+  }
+  .g-sidebar-shield span { display: inline; }
+  .g-sidebar-brand { justify-content: flex-start; }
+  .g-sidebar-link { justify-content: flex-start; }
+  .g-sidebar-close { display: inline-flex; }
+}

@@ -1,0 +1,209 @@
+[
+  {
+    "id": "inv_a9f294b0d324",
+    "type": "url",
+    "target": "https://www.vidmate-official.com/",
+    "date": "2026-08-29T12:44:17.374Z",
+    "risk": "critical",
+    "overallScore": 80,
+    "score": 80,
+    "summary": "Flagged malicious by 6 security vendors",
+    "verdictHeadline": "Flagged malicious by 6 security vendors",
+    "scores": {
+      "security": 15,
+      "privacy": 100,
+      "tracking": 100
+    },
+    "categoryRisk": {
+      "security": 85,
+      "privacy": 0,
+      "tracking": 0
+    },
+    "threatProbability": 36,
+    "potentialImpact": "Critical",
+    "confidence": 87,
+    "findingCounts": {
+      "critical": 1,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "info": 1
+    },
+    "riskCards": [
+      {
+        "id": "NO_TRACKING_PARAMS",
+        "title": "No tracking parameters detected",
+        "severity": "safe",
+        "detail": "The URL does not carry common marketing or click-tracking query parameters."
+      },
+      {
+        "id": "VT_MALICIOUS_URL",
+        "title": "Flagged malicious by 6 security vendors",
+        "severity": "critical",
+        "detail": "This URL was flagged as malicious by 6 of 92 engines on VirusTotal, and suspicious by 0 more."
+      }
+    ],
+    "why": [
+      {
+        "id": "NO_TRACKING_PARAMS",
+        "claim": "No tracking parameters detected",
+        "evidence": "The URL does not carry common marketing or click-tracking query parameters."
+      },
+      {
+        "id": "VT_MALICIOUS_URL",
+        "claim": "Flagged malicious by 6 security vendors",
+        "evidence": "This URL was flagged as malicious by 6 of 92 engines on VirusTotal, and suspicious by 0 more."
+      }
+    ],
+    "whatCouldHappen": [
+      {
+        "id": "VT_MALICIOUS_URL",
+        "title": "Confirmed malicious destination",
+        "detail": "Independent security vendors have already flagged this exact URL as malicious — visiting it can trigger drive-by malware, credential theft, or fraud pages."
+      }
+    ],
+    "attackStory": [],
+    "defense": [
+      {
+        "id": "VT_MALICIOUS_URL",
+        "action": "Do not visit this link",
+        "detail": "Close the tab or delete the message. Independent scanners already confirm this is malicious."
+      }
+    ],
+    "personalContext": "general",
+    "aiExplanation": {
+      "security": {
+        "applicable": true,
+        "summary": "Guardian found strong evidence this is actively dangerous. Main reasons: flagged malicious by 6 security vendors.",
+        "reasons": [
+          {
+            "title": "Flagged malicious by 6 security vendors",
+            "explanation": "This URL was flagged as malicious by 6 of 92 engines on VirusTotal, and suspicious by 0 more."
+          }
+        ],
+        "source": "fallback",
+        "reason": "no_api_key",
+        "agentName": "security_explanation",
+        "durationMs": 0
+      },
+      "canUseIt": {
+        "applicable": true,
+        "verdict": "do_not_use",
+        "explanation": "Guardian found serious evidence of danger. Do not proceed.",
+        "source": "fallback",
+        "reason": "no_api_key",
+        "agentName": "can_use_it",
+        "durationMs": 0
+      },
+      "privacy": {
+        "applicable": false,
+        "notApplicableReason": "No privacy-related evidence was collected.",
+        "source": "skipped",
+        "agentName": "privacy"
+      },
+      "tracking": {
+        "applicable": true,
+        "classification": "none_detected",
+        "summary": "Guardian did not detect tracking or advertising indicators here.",
+        "indicators": [
+          "The URL does not carry common marketing or click-tracking query parameters."
+        ],
+        "source": "fallback",
+        "reason": "no_api_key",
+        "agentName": "tracking",
+        "durationMs": 1
+      },
+      "whatCouldHappen": {
+        "applicable": true,
+        "items": [
+          {
+            "observed": "Flagged malicious by 6 security vendors",
+            "possibleConsequence": "Independent security vendors have already flagged this exact URL as malicious — visiting it can trigger drive-by malware, credential theft, or fraud pages."
+          }
+        ],
+        "source": "fallback",
+        "reason": "no_api_key",
+        "agentName": "what_could_happen",
+        "durationMs": 0
+      },
+      "attackStory": {
+        "applicable": false,
+        "notApplicableReason": "No plausible attack sequence applies at this risk level.",
+        "source": "fallback",
+        "reason": "no_api_key",
+        "agentName": "attack_story",
+        "durationMs": 0
+      },
+      "defense": {
+        "applicable": true,
+        "actions": [
+          {
+            "action": "Do not visit this link",
+            "detail": "Close the tab or delete the message. Independent scanners already confirm this is malicious.",
+            "relatedFinding": "VT_MALICIOUS_URL"
+          }
+        ],
+        "source": "fallback",
+        "reason": "no_api_key",
+        "agentName": "defense",
+        "durationMs": 0
+      },
+      "agentActivity": [
+        {
+          "agent": "security_explanation",
+          "label": "Evaluating security",
+          "ran": true,
+          "reason": "Always explains the overall security picture."
+        },
+        {
+          "agent": "can_use_it",
+          "label": "Preparing recommendation",
+          "ran": true,
+          "reason": "Always provides a usage recommendation."
+        },
+        {
+          "agent": "privacy",
+          "label": "Evaluating privacy",
+          "ran": false,
+          "reason": "No privacy-related evidence was collected."
+        },
+        {
+          "agent": "tracking",
+          "label": "Evaluating tracking & ads",
+          "ran": true,
+          "reason": "Tracking-related findings are present."
+        },
+        {
+          "agent": "what_could_happen",
+          "label": "Projecting possible consequences",
+          "ran": true,
+          "reason": "Notable findings exist to project possible consequences from."
+        },
+        {
+          "agent": "attack_story",
+          "label": "Building possible attack story",
+          "ran": true,
+          "reason": "Risk level is \"critical\" with notable findings — a possible-scenario story is useful."
+        },
+        {
+          "agent": "defense",
+          "label": "Building explanation & defense guidance",
+          "ran": true,
+          "reason": "Always provides at least baseline guidance."
+        }
+      ]
+    },
+    "meta": {
+      "hostname": "www.vidmate-official.com",
+      "root": "vidmate-official.com",
+      "tld": "com",
+      "matchedBrand": null,
+      "vt": {
+        "available": true,
+        "source": "cached_analysis",
+        "permalink": "https://www.virustotal.com/gui/url/aHR0cHM6Ly93d3cudmlkbWF0ZS1vZmZpY2lhbC5jb20v"
+      }
+    },
+    "processingTimeMs": 1754
+  }
+]

@@ -1,0 +1,29 @@
+.g-defense {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.g-defense-item {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: rgba(61,220,151,0.05);
+  border: 1px solid rgba(61,220,151,0.2);
+}
+
+.g-defense-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--risk-safe);
+  background: rgba(61,220,151,0.12);
+}
+
+.g-defense-action { font-size: 13.5px; font-weight: 600; color: var(--text-primary); display: block; margin-bottom: 4px; }
+.g-defense-detail { font-size: 12.5px; color: var(--text-tertiary); line-height: 1.55; }

@@ -1,0 +1,22 @@
+.g-agentact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.g-agentact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px var(--space-3);
+  border-radius: var(--radius-sm);
+}
+
+.g-agentact-icon { flex-shrink: 0; margin-top: 1px; }
+.g-agentact-row--ran .g-agentact-icon { color: var(--core-cyan); }
+.g-agentact-row--skipped .g-agentact-icon { color: var(--text-tertiary); }
+
+.g-agentact-body { display: flex; flex-direction: column; gap: 1px; }
+.g-agentact-label { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+.g-agentact-row--skipped .g-agentact-label { color: var(--text-tertiary); }
+.g-agentact-reason { font-size: 11.5px; color: var(--text-tertiary); }
